@@ -19,7 +19,9 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "prepare": "simple-git-hooks"
+    "test": "vitest",
+    "prepare": "simple-git-hooks",
+    "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
