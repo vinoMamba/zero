@@ -1,5 +1,4 @@
 import { it } from 'vitest'
-import { isArray, isBoolean, isEmail, isFunction, isNumber, isObject, isString, isUrl } from '../src'
 import { isArray, isBoolean, isEmail, isFunction, isNull, isNumber, isObject, isString, isUrl } from '../src'
 
 it('isEmail', (t) => {
