@@ -25,7 +25,7 @@ export function treeToList<T = any>(tree: Array<T>, opt?: TreeHelperOpt): Array<
   const { children: c } = getOpt(opt)
   const cloneTree = [...tree]
   cloneTree.forEach((item, index) => {
-    const children = item[c]
+    const children = (item as Record<string, any>)[c]
     if (children)
       cloneTree.splice(index + 1, 0, ...children)
   })
@@ -39,12 +39,12 @@ export function listToTree<T = any>(list: Array<T>, opt?: TreeHelperOpt) {
   const result: Array<T> = []
 
   for (const item of cloneList) {
-    item[children] = item[children] || []
-    treeMap.set(item[id], item)
+    (item as Record<string, any>)[children] = (item as Record<string, any>)[children] || []
+    treeMap.set((item as Record<string, any>)[id], item)
   }
 
   for (const item of cloneList) {
-    const parent = treeMap.get(item[pid])
+    const parent = treeMap.get((item as Record<string, any>)[pid])
     parent ? parent[children].push(item) : result.push(item)
   }
   return result
