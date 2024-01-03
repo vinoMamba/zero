@@ -1,10 +1,10 @@
 {
-  "name": "zero",
+  "name": "@vinostudio/zero",
   "type": "module",
 
-  "version": "0.0.0",
-  "description": "",
-  "author": "",
+  "version": "0.0.1",
+  "description": "a front tool",
+  "author": "vino <vino0908@outlook.com>",
   "license": "MIT",
   "keywords": [],
   "exports": {
@@ -17,6 +17,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "test": "vitest",
