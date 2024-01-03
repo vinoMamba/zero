@@ -1,8 +1,7 @@
 {
   "name": "@vinostudio/zero",
   "type": "module",
-
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a front tool",
   "author": "vino <vino0908@outlook.com>",
   "license": "MIT",
@@ -24,7 +23,9 @@
     "build": "tsup",
     "test": "vitest",
     "prepare": "simple-git-hooks",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.1",
